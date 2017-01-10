@@ -1,7 +1,8 @@
-/CPPTest/Debug/*.log
-/CPPTest/Debug/CPPTest.tlog/*.tlog
-/CPPTest/Debug/*.pdb
-/Debug/*.pdb
+/CPPTest/Debug
+/.vs
+/Debug
 /*.log
 /*.opendb
-/CPPTest/Debug/*.obj
+/*.sdf
+/*.sln
+/*.suo
