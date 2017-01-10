@@ -67,6 +67,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="IA.cpp" />
+    <ClCompile Include="IAStar.cpp" />
     <ClCompile Include="IB.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Test.cpp" />
@@ -75,6 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IA.h" />
+    <ClInclude Include="IAStar.h" />
     <ClInclude Include="IB.h" />
     <ClInclude Include="IBST.h" />
     <ClInclude Include="Test.h" />

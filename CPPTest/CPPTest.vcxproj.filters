@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="IA.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -31,6 +28,10 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="WorkQueue.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="IAStar.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -51,6 +52,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="IBST.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="IAStar.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
