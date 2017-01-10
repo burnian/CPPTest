@@ -1,0 +1,7 @@
+/CPPTest/Debug/*.log
+/CPPTest/Debug/CPPTest.tlog/*.tlog
+/CPPTest/Debug/*.pdb
+/Debug/*.pdb
+/*.log
+/*.opendb
+/CPPTest/Debug/*.obj

@@ -1,79 +1,76 @@
 #include <iostream>
-#include <windows.h>
+#include "IAStar.h"
+
+//class A
+//{
+//public:
+//	A() { printf("A construct\n"); }
+//	~A() { printf("A deconstruct\n"); }
+//};
+//
+//class B
+//{
+//public:
+//	B() { printf("B construct\n"); }
+//	~B() { printf("B deconstruct\n"); }
+//};
+//
+//class Base
+//{
+//public:
+//	Base() {
+//		printf("Base construct\n");
+//	};
+//	~Base() {
+//		printf("Base deconstruct\n");
+//	};
+//
+//public:
+//	B m_p;
+//	A m_pro;
+//};
+
+//Base a(1, 2);
+//Base *b = new Base(3, 4);
+//
+//a = *b;
+//delete(b);
+//a.show();
 
 
-class Base
-{
-public:
-	Base(int a, int b){
-		m_pro[0] = a;
-		m_pro[1] = b;
-		printf("cons %d %d\n", m_pro[0], m_pro[1]);
-	};
-	~Base() {
-		printf("decs %d %d\n", m_pro[0], m_pro[1]);
-	};
+//typedef std::chrono::duration<int> seconds_type;
+//typedef std::chrono::duration<int, std::milli> milliseconds_type;
+//typedef std::chrono::duration<int, std::ratio<60 * 60>> hours_type;
 
-	void show()
-	{
-		printf("show %d %d\n", m_pro[0], m_pro[1]);
-	}
-public:
-	int m_pro[2];
-};
+//hours_type hOneDay(1);
+//seconds_type sOneDay(1);
+//milliseconds_type msOneDay(1);
+//std::cout << hOneDay.count() << std::endl;
+//std::cout<< sOneDay.count() << std::endl;
+//std::cout<< msOneDay.count() << std::endl;
 
-
-
-struct MyStruct
-{
-	int a;
-	int b;
-	~MyStruct()
-	{
-		printf("%d no\n", a);
-	}
-};
-
-MyStruct* f(MyStruct* p)
-{
-	MyStruct a;
-	a.a = 99;
-	a.b = 88;
-
-	*p = a;
-	return &a;
-}
+//seconds_type sOneHour(60 * 60);
+//hours_type hOneHour(std::chrono::duration_cast<hours_type>(sOneHour));
+//milliseconds_type msOneHour(sOneHour);
 
 
 void main()
 {	
-	//typedef std::chrono::duration<int> seconds_type;
-	//typedef std::chrono::duration<int, std::milli> milliseconds_type;
-	//typedef std::chrono::duration<int, std::ratio<60 * 60>> hours_type;
+	IAStar aStar;
+	std::vector<Vec2> blocks;
+	blocks.push_back(Vec2(2, 4));
+	blocks.push_back(Vec2(3, 2));
+	blocks.push_back(Vec2(3, 3));
+	blocks.push_back(Vec2(3, 4));
+	blocks.push_back(Vec2(3, 1));
+	aStar.init(7, 7, blocks);
 
-	//hours_type hOneDay(1);
-	//seconds_type sOneDay(1);
-	//milliseconds_type msOneDay(1);
-	//std::cout << hOneDay.count() << std::endl;
-	//std::cout<< sOneDay.count() << std::endl;
-	//std::cout<< msOneDay.count() << std::endl;
-
-	//seconds_type sOneHour(60 * 60);
-	//hours_type hOneHour(std::chrono::duration_cast<hours_type>(sOneHour));
-	//milliseconds_type msOneHour(sOneHour);
-
-
-	
-
-	Base a(1,2);
-	Base *b = new Base(3,4);
-
-	a = *b;
-	delete(b);
-	a.show();
-
-
-
+	std::vector<Vec2>* path = aStar.findPath(Vec2(1,3), Vec2(5,3));
+	for each (auto v in *path)
+	{
+		printf("(%d,%d)\n", v.x, v.y);
+	}
+	delete(path);
 
 	printf("\n");
 	system("pause");
