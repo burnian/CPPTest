@@ -31,6 +31,7 @@ void IAStar::init(size_t width, size_t height, const std::vector<Vec2>& blocks)
 
 std::vector<Vec2>* IAStar::findPath(const Vec2& start, const Vec2& end)
 {
+	std::vector<Vec2>* pPath = new std::vector<Vec2>();
 	Tile *startTile = new Tile();
 	startTile->pos = start;
 	startTile->parent = nullptr;
@@ -51,7 +52,6 @@ std::vector<Vec2>* IAStar::findPath(const Vec2& start, const Vec2& end)
 		}
 		if (visitNearPoints(pMin, end))
 		{
-			std::vector<Vec2>* pPath = new std::vector<Vec2>();
 			pPath->push_back(end);
 			while (pMin != nullptr)
 			{
@@ -61,7 +61,7 @@ std::vector<Vec2>* IAStar::findPath(const Vec2& start, const Vec2& end)
 			return pPath;
 		}
 	}
-	return nullptr;
+	return pPath;
 }
 
 size_t IAStar::getIndex(int x, int y)

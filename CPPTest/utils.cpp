@@ -112,3 +112,9 @@ int IDebugPrintf(const char* format, ...)
 //print__m128(temp);
 //temp = _mm_shuffle_ps(m1, m2, _SHUFFLE_PARAM(2, 2, 2, 2));
 //print__m128(temp);
+
+
+//bool isSpecNumber(int n, int m)
+//{
+//	return n%10 == m || (n && isSpecNumber(n/10, m));
+//}

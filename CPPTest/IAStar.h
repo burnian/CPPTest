@@ -56,12 +56,12 @@ public:
 
 	// 初始化地图
 	void init(size_t width, size_t height, const std::vector<Vec2>& blocks);
-	// 返回从startPos到endPos可以行走的点列表
+	// 返回从endPos到startPos可以行走的点列表
 	std::vector<Vec2>* findPath(const Vec2& start, const Vec2& end);
 
 private:
 	// 根据网格坐标（x,y都从0开始）得到唯一索引
-	size_t getIndex(int x, int y);
+	inline size_t getIndex(int x, int y);
 	// 估值函数，open中估值最小的tile将进行下一步检测
 	size_t evaluate(Vec2& point);
 	// 判断该点是否为障碍点
