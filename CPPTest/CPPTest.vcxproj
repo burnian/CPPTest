@@ -67,22 +67,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="IA.cpp" />
-    <ClCompile Include="IAStar.cpp" />
-    <ClCompile Include="IB.cpp" />
+    <ClCompile Include="Factory.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Test.cpp" />
     <ClCompile Include="utils.cpp" />
-    <ClCompile Include="WorkQueue.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="IA.h" />
-    <ClInclude Include="IAStar.h" />
-    <ClInclude Include="IB.h" />
-    <ClInclude Include="IBST.h" />
-    <ClInclude Include="Test.h" />
+    <ClInclude Include="Factory.h" />
     <ClInclude Include="utils.h" />
-    <ClInclude Include="WorkQueue.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
